@@ -20,7 +20,7 @@ function App() {
   
   useEffect(()=>{
     // axios.get("http://localhost:5000/api/get")
-    axios.get("https://server-uxel.onrender.com/get")
+    axios.get("https://server-uxel.onrender.com/api/get")
     .then((res)=>{
       console.log(res.data);
       setTasks(res.data);
@@ -39,7 +39,7 @@ function App() {
     axios({
         method: 'post',
         // url: 'http://localhost:5000/api/save',
-        url: 'https://server-uxel.onrender.com/save',
+        url: 'https://server-uxel.onrender.com/api/save',
         data: lund
     })
     .then(function (res) {
@@ -75,7 +75,7 @@ const updateTask=(e)=>{
 axios({
   method: 'put',
   // url: "http://localhost:5000/api/update/"+`${updateId}`,
-  url: "https://server-uxel.onrender.com/update/"+`${updateId}`,
+  url: "https://server-uxel.onrender.com/api/update/"+`${updateId}`,
   data: lund
 })
 .then((res)=> {

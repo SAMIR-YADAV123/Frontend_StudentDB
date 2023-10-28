@@ -9,7 +9,7 @@ const List = ({id,name,reg,email,setUpdateUi,updateMode}) => {
 
     const removeTask=()=>{
         // axios.delete("http://localhost:5000/api/delete/"+`${id}`)
-        axios.delete("https://server-uxel.onrender.com/delete/"+`${id}`)
+        axios.delete("https://server-uxel.onrender.com/api/delete/"+`${id}`)
         .then((res)=>{
             console.log(res);
             setUpdateUi((prevState) => !prevState);
